@@ -29,8 +29,9 @@ namespace Tests
             text.text = buttonText;
         }
 
-        private void Start()
+        private void Awake()
         {
+            text.text = "";
             Reset();
         }
 
@@ -38,6 +39,7 @@ namespace Tests
         {
             _touched = false;
             sprite.color = untouchedColor;
+            _buttonControl = null;
         }
 
         void Update()

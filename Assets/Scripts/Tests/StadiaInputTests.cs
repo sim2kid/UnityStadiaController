@@ -10,7 +10,22 @@ namespace Tests
         public StadiaController Controller { get; private set; }
 
         [SerializeField]
-        private ButtonPressed south; 
+        private ButtonPressed north;
+        [SerializeField]
+        private ButtonPressed east; 
+        [SerializeField]
+        private ButtonPressed south;
+        [SerializeField]
+        private ButtonPressed west; 
+        
+        [SerializeField]
+        private ButtonPressed DUp;
+        [SerializeField]
+        private ButtonPressed DRight;
+        [SerializeField]
+        private ButtonPressed DDown;
+        [SerializeField]
+        private ButtonPressed DLeft;
         
         void Update()
         {
@@ -39,11 +54,29 @@ namespace Tests
         private void UpdateButtons()
         {
             south.SetButtonControl(Controller.buttonSouth, "A");
+            north.SetButtonControl(Controller.buttonNorth, "Y");
+            east.SetButtonControl(Controller.buttonEast, "B");
+            west.SetButtonControl(Controller.buttonWest, "X");
+            
+            DUp.SetButtonControl(Controller.dpad.up);
+            DRight.SetButtonControl(Controller.dpad.right);
+            DDown.SetButtonControl(Controller.dpad.down);
+            DLeft.SetButtonControl(Controller.dpad.left);
+            
         }
 
         private void Reset()
         {
             south.Reset();
+            north.Reset();
+            east.Reset();
+            west.Reset();
+            
+            DUp.Reset();
+            DRight.Reset();
+            DDown.Reset();
+            DLeft.Reset();
+            
         }
     }
 }
