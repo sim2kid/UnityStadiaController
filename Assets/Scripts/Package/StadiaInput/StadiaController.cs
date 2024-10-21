@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.Layouts;
+// ReSharper disable InconsistentNaming
 
 namespace sim2kid.Package.StadiaInput
 {
@@ -37,15 +38,23 @@ namespace sim2kid.Package.StadiaInput
         private static void Init()
         { }
     
-        // ReSharper disable once InconsistentNaming
         public ButtonControl captureButton { get; protected set; }
-        // ReSharper disable once InconsistentNaming
         public ButtonControl googleButton { get; protected set; }
-
+        
+        public ButtonControl systemButton { get; protected set; }
+        
+        public ButtonControl leftTriggerButton { get; protected set; }
+        public ButtonControl rightTriggerButton { get; protected set; }
+        
         protected override void FinishSetup()
         {
             captureButton = GetChildControl<ButtonControl>("captureButton");
             googleButton = GetChildControl<ButtonControl>("googleButton");
+            
+            systemButton = GetChildControl<ButtonControl>("systemButton");
+            
+            leftTriggerButton = GetChildControl<ButtonControl>("leftTriggerButton");
+            rightTriggerButton = GetChildControl<ButtonControl>("rightTriggerButton");
 
             base.FinishSetup();
         }
