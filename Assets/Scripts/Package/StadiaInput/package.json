@@ -1,6 +1,6 @@
 {
     "name" : "com.sim2kid.stadiainput",
-    "version" : "1.0.0",
+    "version" : "1.1.1",
     "description": "Google Stadia Controller Support in Unity's New Input System with full button mapping.",
     "displayName": "Stadia Controller Input",
     "unity": "2022.3",
