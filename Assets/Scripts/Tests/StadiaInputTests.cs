@@ -27,6 +27,33 @@ namespace Tests
         [SerializeField]
         private ButtonPressed DLeft;
         
+        [SerializeField]
+        private ButtonPressed options;
+        [SerializeField]
+        private ButtonPressed menu;
+        
+        [SerializeField]
+        private ButtonPressed google;
+        [SerializeField]
+        private ButtonPressed capture;
+        
+        [SerializeField]
+        private ButtonPressed stadia;
+        
+        [SerializeField]
+        private ButtonPressed leftBumper;
+        [SerializeField]
+        private ButtonPressed leftTrigger;
+        [SerializeField]
+        private ButtonPressed leftTriggerButton;
+        
+        [SerializeField]
+        private ButtonPressed rightBumper;
+        [SerializeField]
+        private ButtonPressed rightTrigger;
+        [SerializeField]
+        private ButtonPressed rightTriggerButton;
+        
         void Update()
         {
             FindController();
@@ -63,6 +90,21 @@ namespace Tests
             DDown.SetButtonControl(Controller.dpad.down);
             DLeft.SetButtonControl(Controller.dpad.left);
             
+            options.SetButtonControl(Controller.selectButton, "***");
+            menu.SetButtonControl(Controller.startButton, "===");
+            
+            google.SetButtonControl(Controller.googleButton, "G");
+            capture.SetButtonControl(Controller.captureButton, "C");
+            
+            stadia.SetButtonControl(null, "S");
+            
+            leftBumper.SetButtonControl(Controller.leftShoulder, "L1");
+            leftTrigger.SetButtonControl(Controller.leftTrigger);
+            leftTriggerButton.SetButtonControl(Controller.leftTrigger, "L2");
+            
+            rightBumper.SetButtonControl(Controller.rightShoulder, "R1");
+            rightTrigger.SetButtonControl(Controller.rightTrigger);
+            rightTriggerButton.SetButtonControl(Controller.rightTrigger, "R2");
         }
 
         private void Reset()
@@ -77,6 +119,21 @@ namespace Tests
             DDown.Reset();
             DLeft.Reset();
             
+            google.Reset();
+            capture.Reset();
+            
+            options.Reset();
+            menu.Reset();
+            
+            stadia.Reset();
+            
+            leftBumper.Reset();
+            leftTrigger.Reset();
+            leftTriggerButton.Reset();
+            
+            rightBumper.Reset();
+            rightTrigger.Reset();
+            rightTriggerButton.Reset();
         }
     }
 }

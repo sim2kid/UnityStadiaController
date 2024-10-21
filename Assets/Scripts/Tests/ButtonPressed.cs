@@ -8,23 +8,24 @@ namespace Tests
     public class ButtonPressed : MonoBehaviour
     {
         [SerializeField]
-        private SpriteRenderer sprite;
+        protected SpriteRenderer sprite;
         [SerializeField]
-        private Color untouchedColor = new Color(0.7f, 0.2f, 0.2f);
+        protected Color untouchedColor = new Color(0.7f, 0.2f, 0.2f);
         [SerializeField]
-        private Color activeColor = new Color(0.4f, 0.47f, 0.9f);
+        protected Color activeColor = new Color(0.4f, 0.47f, 0.9f);
         [SerializeField]
-        private Color touchedColor = new Color(0.3f, 0.6f, 0.3f);
+        protected Color touchedColor = new Color(0.3f, 0.6f, 0.3f);
         
         [SerializeField]
-        private TextMeshPro text;
+        protected TextMeshPro text;
 
-        private bool _touched = false;
+        protected bool _touched = false;
         
-        private ButtonControl _buttonControl;
+        protected ButtonControl _buttonControl;
         
         public void SetButtonControl(ButtonControl buttonControl, string buttonText = "")
         {
+            _touched = false;
             _buttonControl = buttonControl;
             text.text = buttonText;
         }
@@ -35,7 +36,7 @@ namespace Tests
             Reset();
         }
 
-        public void Reset()
+        public virtual void Reset()
         {
             _touched = false;
             sprite.color = untouchedColor;
@@ -45,7 +46,11 @@ namespace Tests
         void Update()
         {
             if (_buttonControl == null) return;
-            
+            OnColorUpdate();
+        }
+
+        protected virtual void OnColorUpdate()
+        {
             var color = _touched ? touchedColor : untouchedColor;
             if (_buttonControl.isPressed)
             {
