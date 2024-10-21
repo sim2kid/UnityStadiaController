@@ -8,6 +8,9 @@ namespace Tests
     public class StadiaInputTests : MonoBehaviour
     {
         public StadiaController Controller { get; private set; }
+
+        [SerializeField]
+        private ButtonPressed south; 
         
         void Update()
         {
@@ -25,10 +28,22 @@ namespace Tests
             {
                 Controller = null;
                 Debug.Log($"Stadia Controller Disconnected.");
+                Reset();
             }
             if (controller is not StadiaController stadiaController) return;
             Controller = stadiaController;
             Debug.Log($"Stadia Controller Connected.");
+            UpdateButtons();
+        }
+
+        private void UpdateButtons()
+        {
+            south.SetButtonControl(Controller.buttonSouth, "A");
+        }
+
+        private void Reset()
+        {
+            south.Reset();
         }
     }
 }
