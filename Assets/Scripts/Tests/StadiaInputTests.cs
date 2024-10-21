@@ -7,7 +7,7 @@ namespace Tests
 {
     public class StadiaInputTests : MonoBehaviour
     {
-        private StadiaController _controller;
+        public StadiaController Controller { get; private set; }
         
         void Update()
         {
@@ -16,11 +16,15 @@ namespace Tests
 
         private void FindController()
         {
-            if (_controller != null) return;
+            if (Controller != null)
+            {
+                if (Controller.added == false) Controller = null;
+                return;
+            }
             var controller = InputSystem.devices.FirstOrDefault(device => device is StadiaController);
             if (controller is not StadiaController stadiaController) return;
-            _controller = stadiaController;
-            Debug.Log($"Stadia controller found: {_controller.name}");
+            Controller = stadiaController;
+            Debug.Log($"Stadia controller found: {Controller.name}");
         }
     }
 }
