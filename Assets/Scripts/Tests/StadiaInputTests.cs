@@ -16,13 +16,16 @@ namespace Tests
 
         private void FindController()
         {
-            if (Controller != null)
+            var controller = InputSystem.devices.FirstOrDefault(device => device is StadiaController);
+            if (controller == Controller)
             {
-                if (Controller.added == false) Controller = null;
-                Debug.Log($"Stadia Controller Disconnected.");
                 return;
             }
-            var controller = InputSystem.devices.FirstOrDefault(device => device is StadiaController);
+            else if (Controller != null)
+            {
+                Controller = null;
+                Debug.Log($"Stadia Controller Disconnected.");
+            }
             if (controller is not StadiaController stadiaController) return;
             Controller = stadiaController;
             Debug.Log($"Stadia Controller Connected.");
