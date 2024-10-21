@@ -19,12 +19,13 @@ namespace Tests
             if (Controller != null)
             {
                 if (Controller.added == false) Controller = null;
+                Debug.Log($"Stadia Controller Disconnected.");
                 return;
             }
             var controller = InputSystem.devices.FirstOrDefault(device => device is StadiaController);
             if (controller is not StadiaController stadiaController) return;
             Controller = stadiaController;
-            Debug.Log($"Stadia controller found: {Controller.name}");
+            Debug.Log($"Stadia Controller Connected.");
         }
     }
 }
