@@ -106,15 +106,15 @@ namespace Tests
             google.SetButtonControl(Controller.googleButton, "G");
             capture.SetButtonControl(Controller.captureButton, "C");
             
-            stadia.SetButtonControl(null, "S");
+            stadia.SetButtonControl(Controller.systemButton, "S");
             
             leftBumper.SetButtonControl(Controller.leftShoulder, "L1");
             leftTrigger.SetButtonControl(Controller.leftTrigger);
-            leftTriggerButton.SetButtonControl(Controller.leftTrigger, "L2");
+            leftTriggerButton.SetButtonControl(Controller.leftTriggerButton, "L2");
             
             rightBumper.SetButtonControl(Controller.rightShoulder, "R1");
             rightTrigger.SetButtonControl(Controller.rightTrigger);
-            rightTriggerButton.SetButtonControl(Controller.rightTrigger, "R2");
+            rightTriggerButton.SetButtonControl(Controller.rightTriggerButton, "R2");
             
             leftStick.SetStickControl(Controller.leftStick);
             leftStickButton.SetButtonControl(Controller.leftStickButton, "L3");
