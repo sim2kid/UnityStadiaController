@@ -54,6 +54,16 @@ namespace Tests
         [SerializeField]
         private ButtonPressed rightTriggerButton;
         
+        [SerializeField]
+        private StickInput leftStick;
+        [SerializeField]
+        private ButtonPressed leftStickButton;
+        
+        [SerializeField]
+        private StickInput rightStick;
+        [SerializeField]
+        private ButtonPressed rightStickButton;
+        
         void Update()
         {
             FindController();
@@ -105,6 +115,12 @@ namespace Tests
             rightBumper.SetButtonControl(Controller.rightShoulder, "R1");
             rightTrigger.SetButtonControl(Controller.rightTrigger);
             rightTriggerButton.SetButtonControl(Controller.rightTrigger, "R2");
+            
+            leftStick.SetStickControl(Controller.leftStick);
+            leftStickButton.SetButtonControl(Controller.leftStickButton, "L3");
+            
+            rightStick.SetStickControl(Controller.rightStick);
+            rightStickButton.SetButtonControl(Controller.rightStickButton, "R3");
         }
 
         private void Reset()
@@ -134,6 +150,12 @@ namespace Tests
             rightBumper.Reset();
             rightTrigger.Reset();
             rightTriggerButton.Reset();
+            
+            leftStick.Reset();
+            leftStickButton.Reset();
+            
+            rightStick.Reset();
+            rightStickButton.Reset();
         }
     }
 }
