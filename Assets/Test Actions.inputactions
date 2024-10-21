@@ -1,0 +1,34 @@
+{
+    "name": "Test Actions",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "76a4b99a-e51f-49b7-9b0b-166f8975586d",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "68f5ac3d-0724-4f31-a951-b89ea9f61031",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "70b2e08e-7683-49ec-a990-d1b6d723676d",
+                    "path": "<Stadia Controller>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
