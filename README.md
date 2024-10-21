@@ -2,6 +2,9 @@
 ## About
 This package adds definition for the Google Stadia Controller to Unity's Input System allowing for the use of a Stadia Controller natively with Unity.
 
+### Known Issues:
+* Haptics can not be sent to the controllers.
+
 ## Installation
 1. Open up Unity's Package Manager ( **Window > Package Manager** )
 2. In the top left, hit the `+`(plus) button and select `Add package from git URL...`
@@ -14,3 +17,6 @@ To set a target version, use the release tag like `#1.0.0` at the end of the rep
 
 ## Required Packages
 * Unity Input System >= 1.11.2
+
+## Notes
+- Each Stadia Controller must be flashed to Bluetooth Mode before this script will work. Visit [this page](https://stadia.google.com/controller/) to do so now.
