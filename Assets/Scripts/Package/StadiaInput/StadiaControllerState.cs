@@ -44,8 +44,8 @@ namespace sim2kid.Package.StadiaInput
         // These are non-regular to gamepads and thus are optional
         [InputControl(name = "captureButton", layout = "Button", displayName = "Capture", offset = 2, bit = 0)]
         [InputControl(name = "googleButton", layout = "Button", displayName = "Assistant", offset = 2, bit = 1)]
-        [InputControl(name = "leftTriggerButton", layout = "Button", bit = 2)]
-        [InputControl(name = "rightTriggerButton", layout = "Button", bit = 3)]
+        [InputControl(name = "leftTriggerButton", layout = "Button", displayName = "Left Trigger Button", bit = 2)]
+        [InputControl(name = "rightTriggerButton", layout = "Button", displayName = "Right Trigger Button", bit = 3)]
         // The Stadia Button
         [InputControl(name = "systemButton", displayName = "Home", layout = "Button", bit = 4)]
 
