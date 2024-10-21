@@ -5,6 +5,12 @@ This package adds definition for the Google Stadia Controller to Unity's Input S
 ### Known Issues:
 * Haptics can not be sent to the controllers.
 
+### Tested In:
+* Unity 2022.3.50f1
+
+> This will likely work in other versions of Unity. 
+> If you have any problems, please open an [Issue](https://github.com/sim2kid/UnityStadiaController/issues/new?assignees=sim2kid&labels=bug&projects=&template=bug_report.md&title=Unity%20Version%20Incapability+%5BBUG%5D)
+
 ## Installation
 1. Open up Unity's Package Manager ( **Window > Package Manager** )
 2. In the top left, hit the `+`(plus) button and select `Add package from git URL...`
