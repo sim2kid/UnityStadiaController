@@ -34,10 +34,12 @@ namespace sim2kid.Package.StadiaInput
         // In the Player, to trigger the calling of the static constructor,
         // create an empty method annotated with RuntimeInitializeOnLoadMethod.
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        static void Init()
+        private static void Init()
         { }
     
+        // ReSharper disable once InconsistentNaming
         public ButtonControl captureButton { get; protected set; }
+        // ReSharper disable once InconsistentNaming
         public ButtonControl googleButton { get; protected set; }
 
         protected override void FinishSetup()

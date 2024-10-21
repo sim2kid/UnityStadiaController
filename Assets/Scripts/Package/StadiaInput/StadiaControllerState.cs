@@ -6,7 +6,7 @@ using UnityEngine.InputSystem.Utilities;
 namespace sim2kid.Package.StadiaInput
 {
     [StructLayout(LayoutKind.Explicit, Size = 10)]
-    struct StadiaControllerState : IInputStateTypeInfo
+    internal struct StadiaControllerState : IInputStateTypeInfo
     {
         // Because all HID input reports are tagged with the 'HID ' FourCC,
         // this is the format we need to use for this state struct.
@@ -41,7 +41,7 @@ namespace sim2kid.Package.StadiaInput
 
 
 
-        // These are non-regular to gampads and thus are optional
+        // These are non-regular to gamepads and thus are optional
         [InputControl(name = "captureButton", layout = "Button", displayName = "Capture", offset = 2, bit = 0)]
         [InputControl(name = "googleButton", layout = "Button", displayName = "Assistant", offset = 2, bit = 1)]
         [InputControl(name = "leftTriggerButton", layout = "Button", bit = 2)]
