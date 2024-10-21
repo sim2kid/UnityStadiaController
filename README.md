@@ -15,6 +15,10 @@ This package adds definition for the Google Stadia Controller to Unity's Input S
 `https://github.com/sim2kid/UnityStadiaController.git?path=Assets/Scripts/Package/StadiaInput`
 To set a target version, use the release tag like `#1.0.0` at the end of the repo string.
 
+### Alternative Installation
+If desired, you can instead install this package by copying the script files into your own repository.
+All script files are at `Assets/Scripts/Package/StadiaInput`.
+
 ## Required Packages
 * Unity Input System >= 1.11.2
 
